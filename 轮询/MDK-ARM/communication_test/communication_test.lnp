@@ -1,0 +1,22 @@
+--cpu Cortex-M3
+"communication_test\startup_stm32f103xb.o"
+"communication_test\main.o"
+"communication_test\stm32f1xx_it.o"
+"communication_test\stm32f1xx_hal_msp.o"
+"communication_test\stm32f1xx_hal_gpio_ex.o"
+"communication_test\stm32f1xx_hal_uart.o"
+"communication_test\stm32f1xx_hal.o"
+"communication_test\stm32f1xx_hal_rcc.o"
+"communication_test\stm32f1xx_hal_rcc_ex.o"
+"communication_test\stm32f1xx_hal_gpio.o"
+"communication_test\stm32f1xx_hal_dma.o"
+"communication_test\stm32f1xx_hal_cortex.o"
+"communication_test\stm32f1xx_hal_pwr.o"
+"communication_test\stm32f1xx_hal_flash.o"
+"communication_test\stm32f1xx_hal_flash_ex.o"
+"communication_test\stm32f1xx_hal_exti.o"
+"communication_test\system_stm32f1xx.o"
+--strict --scatter "communication_test\communication_test.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "communication_test.map" -o communication_test\communication_test.axf
